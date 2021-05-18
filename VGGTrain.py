@@ -56,3 +56,7 @@ def VGGTrain(model, trainloader, testloader):
                 valCorrect += predicted.eq(labels.view_as(predicted)).sum().item()
                 valAccuracy = 100 * valCorrect / valSize
             print(epoch, 'epoch, testing acc: ', valAccuracy, ',testing loss: ', valLoss)
+            
+            
+    #torch.save(model, './drive/Shareddrives/zeogi_gogi/sue_vgg.pt')
+    #torch.save(model.state_dict(), './drive/Shareddrives/zeogi_gogi/sue_vgg.pt')
